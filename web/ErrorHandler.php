@@ -1,6 +1,6 @@
 <?php
 
-namespace sorokinmedia\yii\rollbar\web;
+namespace sorokinmedia\rollbar\web;
 
 use sorokinmedia\rollbar\ErrorHandlerTrait;
 
