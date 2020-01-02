@@ -2,7 +2,7 @@
     "name": "sorokinmedia/yii2-rollbar",
     "description": "Rollbar for Yii2",
     "type": "yii2-extension",
-    "keywords": ["rollbar", "ratchetio", "ratchet.io", "yii", "yii2", "log", "error", "exception", "debug", "monitoring"],
+    "keywords": ["rollbar", "yii", "yii2", "log", "error", "exception", "debug", "monitoring"],
     "license": "BSD-3-Clause",
     "homepage": "http://github.com/sorokinmedia/yii2-rollbar",
     "authors": [
@@ -13,8 +13,11 @@
     ],
     "require": {
         "php": ">=7.1",
-        "yiisoft/yii2": "^2.0.15",
-        "rollbar/rollbar": "^1.5"
+        "yiisoft/yii2": "^2.0.30",
+        "rollbar/rollbar": "^2.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
     },
     "autoload": {
         "psr-4": {
