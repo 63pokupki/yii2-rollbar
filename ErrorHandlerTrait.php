@@ -93,7 +93,7 @@ trait ErrorHandlerTrait
                     $payloadData = ArrayHelper::merge($exceptionData, $payloadData);
                 }
             } elseif ($exceptionData !== null) {
-                throw new Exception(get_class($exception) . '::rollbarPayload() returns an incorrect result');
+                throw new \RuntimeException(get_class($exception) . '::rollbarPayload() returns an incorrect result');
             }
         }
         return $payloadData;
@@ -109,11 +109,11 @@ trait ErrorHandlerTrait
             return null;
         }
         if (!is_callable($this->payloadDataCallback)) {
-            throw new Exception('Incorrect callback provided');
+            throw new \RuntimeException('Incorrect callback provided');
         }
         $payloadData = call_user_func($this->payloadDataCallback, $this);
         if (!is_array($payloadData) && $payloadData !== null) {
-            throw new Exception('Callback returns an incorrect result');
+            throw new \RuntimeException('Callback returns an incorrect result');
         }
         return $payloadData;
     }
